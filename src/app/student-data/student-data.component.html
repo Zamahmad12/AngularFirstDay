@@ -1,0 +1,38 @@
+<form id="form">
+    <label class="label" for="id">Id:</label><br>
+    <input class="style" type="number" placeholder="Enter your Id"><br><br>
+    <label class="label" for="fname">First name:</label><br>
+    <input class="style" type="text" placeholder="Enter your first name" ><br><br>
+    <label class="label" for="lname">Last name:</label><br>
+    <input class="style" type="text" placeholder="Enter your last name" ><br><br>
+    <label class="label" for="email">Email:</label><br>
+    <input class="style" type="email" placeholder="Enter your email" ><br><br>
+    <label class="label" for="major">Major:</label><br>
+    <input class="style" type="text" placeholder="Enter your major" ><br><br>
+    <label class="label" for="year">Year:</label><br>
+    <input class="style" type="number" placeholder="Enter year"><br><br>
+    <button  (click)="addValue()">Add </button><br><br>
+  </form>
+  
+<table>
+    <thead>
+        <tr>
+            <th>Id</th> 
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Major</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let item of student">
+            <td>{{item.id}}</td>
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.major}}</td>
+            <td>{{item.year}}</td>
+    </tr>
+    </tbody>
+</table>
